@@ -1,8 +1,8 @@
 def get_num_words(book: str) -> int:
     return len(book.split())
 
-def get_num_of_chars(book: str) -> dict[str:int]:
-    num_chars: dict[str:int] = {}
+def get_num_of_chars(book: str) -> dict[str, int]:
+    num_chars: dict[str, int] = {}
     for char in book.lower():
         if char not in num_chars:
             num_chars[char] = 1
@@ -10,7 +10,7 @@ def get_num_of_chars(book: str) -> dict[str:int]:
             num_chars[char] += 1
     return num_chars
 
-def sort_dict(num_chars: dict[str:int]) -> list:
+def sort_dict(num_chars: dict[str, int]) -> list:
     sorted_dict = []
     for char in num_chars:
         num = num_chars[char]
